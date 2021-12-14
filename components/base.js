@@ -3,23 +3,24 @@ import {
   Container,
   Text,
   Heading,
-  Center,
-  NativeBaseProvider,
-  Link,
 } from "native-base"
-//import Konteyner from "./components/konteyner";
+import base from "./components/base";
 
-export const App = () => {
+export const base = () => {
+    return (
+      <Link mt={4} href="https://nativebase.io">
+        Click here to open documentation.
+      </Link>
+    )
+  }
+export const base = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
          <Container>
       <Heading>
         A component library for the
-        <Link mt={4} href="https://nativebase.io">
         <Heading color="emerald.500"> React Ecosystem</Heading>
-      </Link>
-        
       </Heading>
       <Text mt="3" fontWeight="medium">
         NativeBase is a simple, modular and accessible component library that
@@ -29,13 +30,4 @@ export const App = () => {
     </>
   );
    };
-             
-export default () => {
-  return (
-    <NativeBaseProvider>
-      <Center flex={1}>
-      <App />
-      </Center>
-    </NativeBaseProvider>
-  );
-};
+   export default base;
